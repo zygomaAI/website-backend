@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_section_sections",
+  "info": {
+    "displayName": "Section"
+  },
+  "options": {},
+  "attributes": {
+    "SectionTitle": {
+      "type": "string",
+      "required": true
+    },
+    "SectionContent": {
+      "type": "richtext",
+      "required": true
+    },
+    "SectionImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

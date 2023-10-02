@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "Services"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "HeaderContent": {
+      "type": "richtext",
+      "required": true
+    },
+    "HeaderImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "InsightsTitle": {
+      "type": "string",
+      "required": true
+    },
+    "InsightsContent": {
+      "type": "richtext",
+      "required": true
+    },
+    "InsightsImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "SectionData": {
+      "displayName": "Section",
+      "type": "component",
+      "repeatable": true,
+      "component": "section.section"
+    }
+  }
+}
