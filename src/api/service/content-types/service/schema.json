@@ -4,7 +4,8 @@
   "info": {
     "singularName": "service",
     "pluralName": "services",
-    "displayName": "Services"
+    "displayName": "Services",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,15 +21,15 @@
       "required": true
     },
     "HeaderImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      ]
     },
     "InsightsTitle": {
       "type": "string",
@@ -39,21 +40,29 @@
       "required": true
     },
     "InsightsImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      ]
     },
     "SectionData": {
       "displayName": "Section",
       "type": "component",
       "repeatable": true,
       "component": "section.section"
+    },
+    "MetaDesc": {
+      "type": "text",
+      "required": true
+    },
+    "MetaKeywords": {
+      "type": "text",
+      "required": true
     }
   }
 }

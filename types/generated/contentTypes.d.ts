@@ -368,6 +368,7 @@ export interface ApiServiceService extends Schema.CollectionType {
     singularName: 'service';
     pluralName: 'services';
     displayName: 'Services';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -380,6 +381,8 @@ export interface ApiServiceService extends Schema.CollectionType {
     InsightsContent: Attribute.RichText & Attribute.Required;
     InsightsImage: Attribute.Media & Attribute.Required;
     SectionData: Attribute.Component<'section.section', true>;
+    MetaDesc: Attribute.Text & Attribute.Required;
+    MetaKeywords: Attribute.Text & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
