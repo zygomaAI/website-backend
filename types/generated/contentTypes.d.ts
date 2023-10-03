@@ -362,45 +362,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiServiceService extends Schema.CollectionType {
-  collectionName: 'services';
-  info: {
-    singularName: 'service';
-    pluralName: 'services';
-    displayName: 'Services';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    Title: Attribute.String & Attribute.Required;
-    HeaderContent: Attribute.RichText & Attribute.Required;
-    HeaderImage: Attribute.Media & Attribute.Required;
-    InsightsTitle: Attribute.String & Attribute.Required;
-    InsightsContent: Attribute.RichText & Attribute.Required;
-    InsightsImage: Attribute.Media & Attribute.Required;
-    SectionData: Attribute.Component<'section.section', true>;
-    MetaDesc: Attribute.Text & Attribute.Required;
-    MetaKeywords: Attribute.Text & Attribute.Required;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::service.service',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::service.service',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -716,6 +677,201 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiAboutUsAboutUs extends Schema.SingleType {
+  collectionName: 'about_uses';
+  info: {
+    singularName: 'about-us';
+    pluralName: 'about-uses';
+    displayName: 'About Us';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    MetaDesc: Attribute.Text & Attribute.Required;
+    MetaKeywords: Attribute.Text & Attribute.Required;
+    Title: Attribute.String & Attribute.Required;
+    HeaderContent: Attribute.RichText;
+    HeaderImage: Attribute.Media & Attribute.Required;
+    InsightsTitle: Attribute.String & Attribute.Required;
+    InsightsContent: Attribute.RichText & Attribute.Required;
+    MissionTitle: Attribute.String & Attribute.Required;
+    MissionText: Attribute.RichText & Attribute.Required;
+    VisionTitle: Attribute.String & Attribute.Required;
+    VisionText: Attribute.RichText & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::about-us.about-us',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::about-us.about-us',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiContactUsContactUs extends Schema.SingleType {
+  collectionName: 'contact_uses';
+  info: {
+    singularName: 'contact-us';
+    pluralName: 'contact-uses';
+    displayName: 'Contact Us';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    MetaDesc: Attribute.Text & Attribute.Required;
+    MetaKeywords: Attribute.Text & Attribute.Required;
+    Title: Attribute.String & Attribute.Required;
+    HeaderContent: Attribute.RichText & Attribute.Required;
+    HeaderImage: Attribute.Media & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::contact-us.contact-us',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::contact-us.contact-us',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHomePageHomePage extends Schema.SingleType {
+  collectionName: 'home_pages';
+  info: {
+    singularName: 'home-page';
+    pluralName: 'home-pages';
+    displayName: 'Home Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    MetaDesc: Attribute.Text & Attribute.Required;
+    MetaKeywords: Attribute.Text & Attribute.Required;
+    HeaderTitle: Attribute.String & Attribute.Required;
+    HeaderContent: Attribute.RichText;
+    InsightsTitle: Attribute.String & Attribute.Required;
+    InsightsContent: Attribute.RichText & Attribute.Required;
+    InsightsImage: Attribute.Media & Attribute.Required;
+    WorkforceEdge: Attribute.Component<'cards.workforce-cards', true>;
+    BenefitsTitle: Attribute.String & Attribute.Required;
+    BenefitsContent: Attribute.RichText & Attribute.Required;
+    BenefitsArr: Attribute.Component<'card.benefits', true>;
+    TestimonialsArr: Attribute.Component<'review.testimonials', true>;
+    TestimonialsTitle: Attribute.String & Attribute.Required;
+    TestimonialsSubTitle: Attribute.String & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::home-page.home-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::home-page.home-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiServiceService extends Schema.CollectionType {
+  collectionName: 'services';
+  info: {
+    singularName: 'service';
+    pluralName: 'services';
+    displayName: 'Services';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String & Attribute.Required;
+    HeaderContent: Attribute.RichText & Attribute.Required;
+    HeaderImage: Attribute.Media & Attribute.Required;
+    InsightsTitle: Attribute.String & Attribute.Required;
+    InsightsContent: Attribute.RichText & Attribute.Required;
+    InsightsImage: Attribute.Media & Attribute.Required;
+    SectionData: Attribute.Component<'section.section', true>;
+    MetaDesc: Attribute.Text & Attribute.Required;
+    MetaKeywords: Attribute.Text & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::service.service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::service.service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSolutionSolution extends Schema.CollectionType {
+  collectionName: 'solutions';
+  info: {
+    singularName: 'solution';
+    pluralName: 'solutions';
+    displayName: 'Solutions';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    MetaDesc: Attribute.Text & Attribute.Required;
+    MetaKeywords: Attribute.Text & Attribute.Required;
+    Title: Attribute.String & Attribute.Required;
+    HeaderContent: Attribute.RichText & Attribute.Required;
+    HeaderImage: Attribute.Media & Attribute.Required;
+    InsightsTitle: Attribute.String & Attribute.Required;
+    InsightsContent: Attribute.RichText & Attribute.Required;
+    InsightsImage: Attribute.Media & Attribute.Required;
+    SectionData: Attribute.Component<'section.section', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::solution.solution',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::solution.solution',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -726,13 +882,17 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::service.service': ApiServiceService;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::i18n.locale': PluginI18NLocale;
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::about-us.about-us': ApiAboutUsAboutUs;
+      'api::contact-us.contact-us': ApiContactUsContactUs;
+      'api::home-page.home-page': ApiHomePageHomePage;
+      'api::service.service': ApiServiceService;
+      'api::solution.solution': ApiSolutionSolution;
     }
   }
 }

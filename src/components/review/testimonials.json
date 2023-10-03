@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_review_testimonials",
+  "info": {
+    "displayName": "Testimonials"
+  },
+  "options": {},
+  "attributes": {
+    "ReviewContent": {
+      "type": "richtext",
+      "required": true
+    },
+    "Author": {
+      "type": "string",
+      "required": true
+    },
+    "AuthorDesignation": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

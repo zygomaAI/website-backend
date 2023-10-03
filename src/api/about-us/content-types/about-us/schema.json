@@ -1,0 +1,65 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_uses",
+  "info": {
+    "singularName": "about-us",
+    "pluralName": "about-uses",
+    "displayName": "About Us"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "MetaDesc": {
+      "type": "text",
+      "required": true
+    },
+    "MetaKeywords": {
+      "type": "text",
+      "required": true
+    },
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "HeaderContent": {
+      "type": "richtext"
+    },
+    "HeaderImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "InsightsTitle": {
+      "type": "string",
+      "required": true
+    },
+    "InsightsContent": {
+      "type": "richtext",
+      "required": true
+    },
+    "MissionTitle": {
+      "type": "string",
+      "required": true
+    },
+    "MissionText": {
+      "type": "richtext",
+      "required": true
+    },
+    "VisionTitle": {
+      "type": "string",
+      "required": true
+    },
+    "VisionText": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

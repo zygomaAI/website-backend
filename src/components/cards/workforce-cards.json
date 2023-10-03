@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_cards_workforce_cards",
+  "info": {
+    "displayName": "Workforce Cards"
+  },
+  "options": {},
+  "attributes": {
+    "CardTitle": {
+      "type": "string",
+      "required": true
+    },
+    "CardContent": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}
